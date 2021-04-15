@@ -40,7 +40,8 @@ const saveNote = (note) =>
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
-  });
+  })
+    .then //write the note to the db;
 
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
